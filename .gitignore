@@ -153,3 +153,7 @@ a.out.*
 
 AGENTS.local.md
 .pi/SYSTEM.md
+
+# Personal fork-local artifacts (regenerated; not for upstream)
+/bench-results/
+/tools/server/public/
