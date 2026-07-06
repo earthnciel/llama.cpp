@@ -25,11 +25,16 @@ project. When any other instruction conflicts with these rules, these rules win.
    headers; always preserve attribution; keep this fork MIT-compatible.
 
 3. **No sensitive data — this is a PUBLIC repo.** Never commit or push anything
-   that could aid an attacker or expose private information: contact details
-   (emails, phone numbers, addresses), IP addresses / hostnames of private
-   machines or networks, API keys, authentication keys, access tokens,
-   passwords, private keys, certificates, or any other secret. Scan every added
-   file before each commit / push. When in doubt, do not commit it.
+   that could aid an attacker or expose private information: direct-contact
+   details (phone / mobile numbers, physical addresses), IP addresses /
+   hostnames of private machines or networks, API keys, authentication keys,
+   access tokens, passwords, private keys, certificates, or any other secret.
+   (Email is treated as acceptable — it is only an indirect contact and the
+   owner has chosen to expose theirs.) Scan every added file before each commit
+   / push. When in doubt, do not commit it. This rule is enforced by a
+   pre-commit secret scanner in [`.githooks/pre-commit`](.githooks/pre-commit);
+   on a fresh clone, activate it once with
+   `git config core.hooksPath .githooks`.
 
 4. **Nothing otherwise unlawful.** Do not perform any action in or through this
    fork that is illegal or legally problematic (e.g. redistributing others'
