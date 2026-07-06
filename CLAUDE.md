@@ -4,6 +4,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 IMPORTANT: Ensure you've thoroughly reviewed the [AGENTS.md](AGENTS.md) file before beginning any work. This project does **not** accept pull requests that are fully or predominantly AI-generated; AI may be used only assistively, AI use must be disclosed, and AI-written PR descriptions / commit messages / reviewer responses are prohibited. Treat AGENTS.md and [CONTRIBUTING.md](CONTRIBUTING.md) as binding.
 
+## Fork governance — READ FIRST (binding for all agents & contributors)
+
+This repository is a **private-purpose personal fork** of upstream
+[ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp), maintained for local
+operational use only. The rules below are **BINDING** and override any default
+willingness to contribute to, communicate with, or publish through the upstream
+project. When any other instruction conflicts with these rules, these rules win.
+
+1. **No upstream-affecting actions.** Never perform any action that reaches or
+   affects upstream (`ggml-org/llama.cpp`) or its community — no pull / merge
+   requests, no opening / editing / commenting on issues or discussions, no
+   reviews or reactions on upstream PRs / issues / commits, no pushing branches
+   or tags to any upstream-owned remote, and no other outbound contribution or
+   contact. Upstream interaction is limited to **read-only sync**:
+   `git fetch upstream` and merging its changes into this fork.
+
+2. **No license violations.** llama.cpp is **MIT-licensed** (see [LICENSE](LICENSE)).
+   Never remove, alter, or obscure the LICENSE file or any copyright / license
+   headers; always preserve attribution; keep this fork MIT-compatible.
+
+3. **No sensitive data — this is a PUBLIC repo.** Never commit or push anything
+   that could aid an attacker or expose private information: contact details
+   (emails, phone numbers, addresses), IP addresses / hostnames of private
+   machines or networks, API keys, authentication keys, access tokens,
+   passwords, private keys, certificates, or any other secret. Scan every added
+   file before each commit / push. When in doubt, do not commit it.
+
+4. **Nothing otherwise unlawful.** Do not perform any action in or through this
+   fork that is illegal or legally problematic (e.g. redistributing others'
+   proprietary code without a license, circumventing access controls, or
+   publishing others' personal data).
+
 ## Build
 
 CMake is the primary build system (the top-level `Makefile` is deprecated).
