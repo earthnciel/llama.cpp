@@ -43,6 +43,14 @@ project. When any other instruction conflicts with these rules, these rules win.
 
 ## Build
 
+**Backend scope (this fork's default):** Unless a request explicitly says
+otherwise, **SYCL is the only managed, built, and tested backend** — build in
+`build-sycl/` (Intel Arc B580, Intel oneAPI; ~2.3× faster generation than Vulkan
+for the MoE workloads used here) and run tests against it. Vulkan (`build/`) is
+kept only as an occasional fallback: do **not** build, test, or update it unless
+the user explicitly asks for Vulkan. Other backends (CUDA / Metal / HIP / …) are
+out of scope in this fork.
+
 CMake is the primary build system (the top-level `Makefile` is deprecated).
 
 ```bash
